@@ -1,4 +1,5 @@
 import csv
+import json
 import sqlite3
 from pathlib import Path
 import os
@@ -100,6 +101,25 @@ def make_calendar_csv():
         _writer.writeheader()
         _writer.writerows(data)
 
+def make_calendar_json():
+    data = qualenia_years()
+    data.sort(key=lambda v: v["date_id"])
+    headers = [
+        "date_id",
+        "day_of_qualenia",
+        "day_of_year",
+        "year",
+        "qualenia",
+        "month",
+        "day",
+        "date",
+        "month_name",
+        "constellation",
+        "season",
+    ]
+    with open("./exports/export.json", "w") as f:
+        json.dump(data, f, indent=2)
+
 def setup_db():
     db_path = Path("db.sqlite")
     if db_path.exists:
@@ -165,6 +185,7 @@ def make_calendar_db():
 
 def main():
     make_calendar_csv()
+    make_calendar_json()
     make_calendar_db()
 
 
