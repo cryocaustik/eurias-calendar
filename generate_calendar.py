@@ -30,10 +30,12 @@ def qualenia_dates():
     day_of_qualenia = 0
     day_of_year = 0
     current_qualenia = 1
+    
     for month in qualenia:
         if month["qualenia"] != current_qualenia:
             current_qualenia = month["qualenia"]
             day_of_year = 0
+        
         for day in range(32):
             day_of_qualenia += 1
             day_of_year += 1
@@ -52,20 +54,29 @@ def qualenia_dates():
 
 
 def qualenia_years():
-    starting_year = 714
     qualenia = qualenia_dates()
 
     years = []
-    for day in qualenia:
-        _day = day["day"]
-        _day = f"0{_day}" if _day < 10 else _day
-        _month = day["month"]
-        _qualenia = day["qualenia"]
-        for year in range(starting_year, starting_year + 101):
+    year = 714
+    current_qualenia = '1'
+
+    # 25 iterations of qualenia 4 yr cycle
+    for _ in range(25):
+
+        # for every day in a qualenia cycle
+        for day in qualenia:
+            if day["qualenia"] != current_qualenia:
+                current_qualenia = day["qualenia"]
+                year += 1
+            _day = day["day"]
+            _day = f"0{_day}" if _day < 10 else _day
+            _month = day["month"]
+            _qualenia = day["qualenia"]
+            
+            # for year in range(starting_year, starting_year + 101):
             _date_id = f"{year}{_qualenia}{_month}{_day}"
             _date = f"{year}-{_qualenia}-{_month}-{_day}"
             years.append({**day, **{"year": year, "date": _date, "date_id": _date_id}})
-
     return years
 
 def make_calendar_csv():
@@ -153,7 +164,7 @@ def make_calendar_db():
     
 
 def main():
-    # make_calendar_csv()
+    make_calendar_csv()
     make_calendar_db()
 
 
