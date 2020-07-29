@@ -1,0 +1,37 @@
+qualenia,month_id,month_name,constellation,season
+1,1,1st Breas,Branchala,Spring
+1,2,Marked Zivil,The Traveler,Spring
+1,3,1st Gileas,Gilean,Spring
+1,4,1st Morgas,Morgion,Summer
+1,5,1st Sarnas,Sargonnas,Summer
+1,6,1st Takis,Takhesis,Summer
+1,7,1st Zebas,Zeboim,Autumn
+1,8,1st Kalas,Mishakal,Autumn
+1,9,1st Palin,Paladine,Autumn
+2,1,2nd Breashin,Shinare,Winter
+2,2,2nd Mazivil,Majere,Winter
+2,3,2nd Gileas,Gilean,Winter
+2,4,Marked Morgas,The Shadow,Spring
+2,5,2nd Sirus,Sirrion,Spring
+2,6,2nd Takis,Takhisis,Spring
+2,7,2nd Hazebas,Habbakuk,Summer
+2,8,2nd Kelas,Hiddukel,Summer
+2,9,2nd Palin,Paladine,Summer
+3,1,3rd Breas,Branchala,Autumn
+3,2,3rd Zivilas,Zivilyn,Autumn
+3,3,3rd Gileas,Gilean,Autumn
+3,4,3rd Chemorgas,Chemosh,Winter
+3,5,3rd Jolus,Kiri-Jolith,Winter
+3,6,3rd Takis,Takhisis,Winter
+3,7,3rd Chizebas,Chislev,Spring
+3,8,3rd Kalas,Mishakal,Spring
+3,9,3rd Palin,Paladine,Spring
+4,1,4th Bre-Orx,Reorx,Summer
+4,2,4th Zivilas,Zivilyn,Summer
+4,3,4th Gileas,Gilean,Summer
+4,4,4th Morgas,Morgion,Autumn
+4,5,Marked Sirus,The Keeper,Autumn
+4,6,4th Takis,Takhisis,Autumn
+4,7,Marked Zebas,The Fury,Winter
+4,8,4th Kelas,Hiddukel,Winter
+4,9,4th Palin,Paladine,Winter

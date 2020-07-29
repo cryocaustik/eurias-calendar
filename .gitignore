@@ -1,0 +1,11 @@
+**/.vscode
+**/.archive
+**/__pycache__
+.pyenv/
+.venv/
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.db
+!*/.gitkeep
